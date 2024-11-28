@@ -115,6 +115,32 @@
       margin: 20px 0;
     }
 
+    /* Invite Bot Button */
+    .invite-btn {
+      padding: 15px 30px;
+      font-size: 1.2rem;
+      color: black;
+      background-color: green;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      box-shadow: 0px 4px 20px rgba(0, 255, 0, 0.7);
+      transition: background-color 0.3s, box-shadow 0.3s, transform 0.2s;
+      margin-top: 20px;
+    }
+
+    .invite-btn:hover {
+      background-color: #00b300;
+      box-shadow: 0px 4px 30px rgba(0, 255, 0, 1);
+      transform: scale(1.1);
+    }
+
+    .invite-btn:active {
+      transform: scale(1.05);
+    }
+
     /* Responsive Adjustments */
     @media (max-width: 600px) {
       .menu-button {
@@ -124,6 +150,12 @@
 
       .drawer {
         width: 80%;
+      }
+
+      .invite-btn {
+        padding: 12px 25px;
+        font-size: 1rem;
+        width: 150px;
       }
     }
   </style>
@@ -144,6 +176,11 @@
   </div>
 
   <h1>Welcome to the Bot Main Lobby</h1>
+
+  <!-- Invite Bot Button -->
+  <a href="https://discord.com/oauth2/authorize?client_id=YOUR_BOT_ID&scope=bot&permissions=YOUR_PERMISSIONS" target="_blank">
+    <button class="invite-btn">Invite Bot</button>
+  </a>
 
   <div class="matrix">
     <canvas id="matrixCanvas"></canvas>
@@ -196,4 +233,4 @@
     setInterval(draw, 33);
   </script>
 </body>
-</html>
+      </html>
